@@ -1,0 +1,27 @@
+{
+  "name": "@buildmind/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BuildMind backend — Fastify server + CLI entry point.",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "buildmind": "./dist/start.js"
+  },
+  "scripts": {
+    "build": "tsc --build",
+    "dev": "tsc --build --watch"
+  },
+  "dependencies": {
+    "@fastify/static": "^7.0.4",
+    "fastify": "^4.28.1"
+  }
+}
